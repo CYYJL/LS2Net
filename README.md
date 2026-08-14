@@ -61,10 +61,6 @@ Section I, **Introduction**, in the paragraph describing the challenges of ultra
 
 </div>
 
-#### Original Figure Citation
-
-The figure was originally cited in the main manuscript at the end of the paragraph introducing the targeted design strategies of LS²Net. The corresponding figure citation was removed from the main manuscript together with the figure to comply with the IEEE Regular Paper page limit.
-
 **Original citation:**
 
 The corresponding sentence in the original manuscript was:
