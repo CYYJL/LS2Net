@@ -44,9 +44,6 @@ Section I, **Introduction**, in the paragraph describing the challenges of ultra
 **Supplementary material:**
 `Figure/challenge.jpg`
 
-**Original figure label:**
-`fig:chanllege`
-
 <div align="center">
 
 <img src="Figure/challenge.jpg" width="92%" alt="Challenges in Ultrasound Image Segmentation"/>
@@ -61,11 +58,10 @@ Section I, **Introduction**, in the paragraph describing the challenges of ultra
 
 </div>
 
-**Original citation:**
-
 The corresponding sentence in the original manuscript was:
 
-Furthermore, in the decoder, we carefully design a Multi-Receptive Field Coarse-to-Fine Module (MRCFM), which balances coarse- and fine-grained information by integrating features from different receptive fields. Through a multi-branch structure, MRCFM provides diverse feature representations, enabling more precise boundary delineation and alleviating the issue of blurry edges, > as shown in Fig.2.
+Furthermore, in the decoder, we carefully design a Multi-Receptive Field Coarse-to-Fine Module (MRCFM), which balances coarse- and fine-grained information by integrating features from different receptive fields. Through a multi-branch structure, MRCFM provides diverse feature representations, enabling more precise boundary delineation and alleviating the issue of blurry edges, 
+> as shown in Fig.2.
 
 ---
 
@@ -288,11 +284,12 @@ The following supplementary analysis provides additional discussion and analysis
 
 > **4) Analysis of Binary Segmentation:**
 > **4) Analysis of Binary Segmentation**: For other binary segmentation datasets, model performance was analyzed using Bland-Altman and linear regression analyses. The number of foreground pixels in both the predicted and manually annotated masks was summed, with the foreground pixel count representing the area of the target segmentation region. The areas of the predicted masks were then compared with those of the ground truth to evaluate LS²Net’s segmentation performance.
+> 
 > **Bland–Altman Analysis:**
 > Bland-Altman analysis reflects the agreement between predicted and ground-truth pixel counts. As shown in Fig.11(a), overall performance is stable, with predictions closely matching the ground truth. Specifically, LS²Net achieved excellent segmentation results on BUS_BRA (bias = -196.98, SD = 1735.35), BUSI (bias = -423.47, SD = 3462.79), KidneyUS (bias = 118.36, SD = 1380.32), Kvasir-SEG (bias = -650.65, SD = 4619.4), CVC-ClinicDB (bias = -425.89, SD = 1480.23), EchoNet-ED (bias = 35.98, SD = 835.67), and EchoNet-ES (bias = -59.41, SD = 632.75). Most pixel differences are concentrated near the zero line, indicating minimal bias between predictions and ground truth, and demonstrating strong consistency of LS²Net across different datasets.
 >
 > **Linear Regression Analysis:**
-> Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig.11(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS_BRA (R = 0.943, P = 9.43×10$^{-90}$), BUSI (R = 0.847, P = 1.548×10$^{-22}$), KidneyUS (R = 0.924, P = $6.11 \times 10^{-23}$), Kvasir-SEG (R = 0.854, P = 1.682×10$^{-29}$), CVC-ClinicDB (R = 0.963, P = 8.76×10$^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
+> Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig.11(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS_BRA (R = 0.943, P = $9.43 \times 10^{-90}$), BUSI (R = 0.847, P = $ 1.548×10^{-22}$), KidneyUS (R = 0.924, P = $6.11 \times 10^{-23}$), Kvasir-SEG (R = 0.854, P = $1.682 \times 10^{-29}$), CVC-ClinicDB (R = 0.963, P =$8.76 \times 10^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
 
 
 ---
@@ -326,22 +323,12 @@ The following supplementary analysis provides additional discussion and analysis
 > ### Failure Case Analysis
 >
 > Although LS²Net achieves promising segmentation performance, certain limitations still lead to suboptimal results on some images. As illustrated in Fig.15, we present failure cases of LS²Net on the BUSI dataset. During the spatial–frequency interaction process in LS²Net, operations such as convolution, downsampling, and frequency-domain transformation may introduce frequency-domain aliasing when the input signal contains high-frequency components beyond the Nyquist frequency. This aliasing effect, when transformed back into the spatial domain, may manifest as structural artifacts or abnormal textures, resulting in distortions or repetitions in the image. Consequently, these artifacts can interfere with feature extraction, mislead the model in identifying true anatomical structures, and lead to structural inconsistencies, inaccurate boundary localization, and mis-segmentation in local regions.
+> 
 > In future work, the frequency-domain processing can be further improved. Specifically, frequency band selection or adaptive frequency weighting mechanisms can be introduced in the frequency branch to reduce the influence of unreliable high-frequency components on feature representation. In addition, incorporating frequency-domain consistency constraints—such as frequency-domain regularization or consistency loss during training—can help maintain more stable structural representations between the spatial and frequency domains, thereby improving robustness against artifacts.
 
 ---
 
 ## IV. Supplementary Materials from Discussion and Conclusion
-
-### 9. Overall Summary of LS²Net
-
-**Original location:**
-Section V, **Discussion and Conclusion**, at the beginning of the section.
-
-The following summary was removed from the main manuscript:
-
-> Ultrasound imaging, as a widely used medical imaging modality, is applied for the diagnosis of multiple organs and systems throughout the body. To meet the growing clinical demands for accuracy, efficiency, and versatility, modern ultrasound systems are increasingly integrating multiple AI-assisted functions (lesion segmentation). However, deploying these segmentation models directly within ultrasound machines (on-device) for real-time inference is challenging due to the constraints of computational resources, memory capacity, and power consumption. Therefore, developing lightweight and efficient network architectures is essential. To address this need, we propose LS²Net, a lightweight medical image segmentation framework that achieves a balance between segmentation accuracy and computational efficiency. The encoder combines global and local receptive fields to capture multi-scale contextual information, while the decoder employs a multi-receptive field fusion strategy to reconstruct fine-grained features at different levels. The LACS module further refines skip connections to preserve boundary details. Benefiting from these architectural designs, LS²Net achieves a favorable trade-off between accuracy and efficiency, delivering state-of-the-art segmentation performance across five medical scenarios and seven datasets, and demonstrating strong generalization ability on four cross-dataset tests, while significantly reducing computational cost without sacrificing segmentation quality.
-
----
 
 ### 10. On-Device Deployment and Real-Time Clinical Applications
 
@@ -350,7 +337,7 @@ Section V, **Discussion and Conclusion**, immediately after the overall summary 
 
 The following discussion was removed from the main manuscript:
 
-> LS²Net contains only 0.21M parameters and achieves an inference speed of 96 FPS, making it easily embeddable into ultrasound consoles or portable devices for real-time, on-device segmentation. This capability enables efficient operation directly on the ultrasound platform, allowing real-time segmentation of target regions during image acquisition and substantially enhancing the efficiency and intelligence of ultrasound examinations. Clinically, real-time lesion localization and quantitative visualization during scanning facilitate faster and more accurate diagnosis, which is particularly valuable in emergency, bedside, and primary healthcare settings where computational resources are limited.
+> This capability enables efficient operation directly on the ultrasound platform, allowing real-time segmentation of target regions during image acquisition and substantially enhancing the efficiency and intelligence of ultrasound examinations. Clinically, real-time lesion localization and quantitative visualization during scanning facilitate faster and more accurate diagnosis, which is particularly valuable in emergency, bedside, and primary healthcare settings where computational resources are limited.
 
 
 ---
@@ -374,18 +361,6 @@ Section V, **Discussion and Conclusion**, following the discussion of cross-moda
 The following discussion was removed from the main manuscript:
 
 > In real-world clinical settings, imaging devices and computational resources vary significantly across institutions and regions, and the applicability of our model in such diverse environments remains to be further explored. In the future, we plan to deploy LS²Net on edge computing devices and collaborate with clinicians for professional validation to further assess its feasibility and practicality in real-world clinical workflows. Through joint evaluation with medical experts, we aim to investigate the model’s consistency across different disease types, imaging parameters, and operator conditions, thereby confirming its clinical robustness and reliability. Moreover, the generalization capability of LS²Net across various imaging devices and modalities warrants further investigation. We intend to conduct systematic multi-center and multi-device experiments to evaluate its stability and adaptability, enhancing its reliability in diverse clinical scenarios. LS²Net is expected to promote the standardization and generalization of intelligent ultrasound-assisted diagnosis, providing a stable, efficient, and scalable intelligent diagnostic support system for remote areas and primary healthcare institutions.
-
----
-
-### 13. Fine-Grained Feature Processing and Lightweight Decoder Design
-
-**Original location:**
-Section V, **Discussion and Conclusion**, at the end of the section.
-
-The following discussion was removed from the main manuscript:
-
-> LS²Net implements fine-grained processing for different types of features, establishing a coarse-to-fine feature handling strategy that enables diversified feature representations. Meanwhile, the RRSC module optimizes skip connections, effectively reducing the computational burden on the decoder and accelerating feature reconstruction. LS²Net provides a novel approach for lightweight segmentation models that balance performance and speed, offering a practical solution to meet the demands of clinical applications.
-
 
 ---
 
