@@ -330,7 +330,7 @@ The following supplementary analysis provides additional discussion and analysis
 
 ## IV. Supplementary Materials from Discussion and Conclusion
 
-### 10. On-Device Deployment and Real-Time Clinical Applications
+### 9. On-Device Deployment and Real-Time Clinical Applications
 
 **Original location:**
 Section V, **Discussion and Conclusion**, immediately after the overall summary of LS²Net.
@@ -342,7 +342,7 @@ The following discussion was removed from the main manuscript:
 
 ---
 
-### 11. Cross-Modality Generalization of the Collaborative Receptive Field Paradigm
+### 10. Cross-Modality Generalization of the Collaborative Receptive Field Paradigm
 
 **Original location:**
 Section V, **Discussion and Conclusion**, following the discussion of real-time on-device deployment.
@@ -353,7 +353,7 @@ The following discussion was removed from the main manuscript:
 
 ---
 
-### 12. Clinical Deployment and Future Work
+### 11. Clinical Deployment and Future Work
 
 **Original location:**
 Section V, **Discussion and Conclusion**, following the discussion of cross-modality generalization.
@@ -364,22 +364,3 @@ The following discussion was removed from the main manuscript:
 
 ---
 
-## V. Summary
-
-The materials provided in this repository were originally included in the manuscript but were removed from the main text solely to satisfy the IEEE Regular Paper page limit. They include:
-
-1. Effective receptive-field visualization and analysis;
-2. Visualization of ultrasound segmentation challenges;
-3. Discussion of local receptive-field limitations;
-4. Discussion of global receptive-field limitations;
-5. Comparison of representative segmentation methods;
-6. Additional discussion of ultrasound segmentation challenges and LS²Net motivation;
-7. Bland–Altman and linear regression analyses;
-8. Failure-case analysis;
-9. Additional discussion of the overall LS²Net framework;
-10. On-device deployment and real-time clinical application analysis;
-11. Cross-modality generalization discussion;
-12. Clinical deployment and future research directions; and
-13. Fine-grained feature processing and lightweight decoder analysis.
-
-These supplementary materials are provided for editorial reference and do not introduce changes to the proposed methodology or the experimental results reported in the main manuscript.
