@@ -195,9 +195,6 @@ This discussion was removed solely to reduce the manuscript page count and avoid
 
 ---
 
-# LS2Net: A Lightweight Segmentation Network for Ultrasound Imaging via Synergy of Large and Small Receptive Fields
-Code will be made available upon paper acceptance
-
 ## Deleted Content from Experiment and Results
 
 The following materials were removed from the Experiment and Results section of the manuscript solely to comply with the IEEE Regular Paper page limit. They are preserved here for editorial reference.
@@ -313,6 +310,79 @@ The complete **“Failure Case Analysis”** subsection and its corresponding fi
 **Reason for deletion:**
 
 This failure-case analysis and its corresponding figure were removed solely to reduce the manuscript page count. The main methodological contributions and experimental validation of LS²Net remain unchanged.
+
+---
+## Deleted Content from Discussion and Conclusion
+
+The following materials were removed from the Discussion and Conclusion section of the manuscript solely to comply with the IEEE Regular Paper page limit. They are preserved here for editorial reference.
+
+### 1. Deleted Discussion and Conclusion: Overall Summary of LS²Net
+
+**Original location:**
+Section V, **Discussion and Conclusion**, at the **beginning of the section**.
+
+**Deleted text:**
+
+> Ultrasound imaging, as a widely used medical imaging modality, is applied for the diagnosis of multiple organs and systems throughout the body. To meet the growing clinical demands for accuracy, efficiency, and versatility, modern ultrasound systems are increasingly integrating multiple AI-assisted functions (lesion segmentation). However, deploying these segmentation models directly within ultrasound machines (on-device) for real-time inference is challenging due to the constraints of computational resources, memory capacity, and power consumption. Therefore, developing lightweight and efficient network architectures is essential. To address this need, we propose LS$^2$Net, a lightweight medical image segmentation framework that achieves a balance between segmentation accuracy and computational efficiency. The encoder combines global and local receptive fields to capture multi-scale contextual information, while the decoder employs a multi-receptive field fusion strategy to reconstruct fine-grained features at different levels. The LACS module further refines skip connections to preserve boundary details. Benefiting from these architectural designs, LS$^2$Net achieves a favorable trade-off between accuracy and efficiency, delivering state-of-the-art segmentation performance across five medical scenarios and seven datasets, and demonstrating strong generalization ability on four cross-dataset tests, while significantly reducing computational cost without sacrificing segmentation quality.
+
+**Reason for deletion:**
+This introductory summary of the proposed framework and its overall performance was removed solely to reduce the manuscript page count. The key methodology, experimental results, and contributions of LS$^2$Net remain fully presented in the main manuscript.
+
+---
+
+### 2. Deleted Discussion: On-Device Deployment and Real-Time Clinical Applications
+
+**Original location:**
+Section V, **Discussion and Conclusion**, immediately after the paragraph summarizing the overall performance of LS$^2$Net.
+
+**Deleted text:**
+
+> LS$^2$Net contains only 0.21M parameters and achieves an inference speed of 96 FPS, making it easily embeddable into ultrasound consoles or portable devices for real-time, on-device segmentation. This capability enables efficient operation directly on the ultrasound platform, allowing real-time segmentation of target regions during image acquisition and substantially enhancing the efficiency and intelligence of ultrasound examinations. Clinically, real-time lesion localization and quantitative visualization during scanning facilitate faster and more accurate diagnosis, which is particularly valuable in emergency, bedside, and primary healthcare settings where computational resources are limited.
+
+**Reason for deletion:**
+This discussion was removed solely to reduce the manuscript page count. The lightweight nature and real-time inference capability of LS$^2$Net remain reflected by the reported parameter count and inference speed in the main manuscript.
+
+---
+
+### 3. Deleted Discussion: Cross-Modality Generalization of the Collaborative Receptive Field Paradigm
+
+**Original location:**
+Section V, **Discussion and Conclusion**, after the discussion of the real-time on-device deployment capability of LS$^2$Net.
+
+**Deleted text:**
+
+> The collaborative receptive field paradigm integrates multi-scale receptive fields via a multi-branch architecture to jointly model structural and texture information. As it is inherently modality-agnostic, it demonstrates strong cross-modality generalization. In MRI and CT, large receptive fields capture global anatomical structures, while small receptive fields refine local details, enabling effective segmentation across different scales. In histopathology, large receptive fields model tissue-level context, whereas small receptive fields focus on cellular morphology, aligning well with cell-level analysis tasks. Overall, this paradigm provides a unified and flexible framework for multi-scale feature modeling, which can be readily extended to various medical imaging modalities and tasks.
+
+**Reason for deletion:**
+This broader discussion of the potential applicability of the collaborative receptive field paradigm to other medical imaging modalities was removed solely to reduce the manuscript page count. The main manuscript retains the core design and validation of the collaborative receptive field paradigm in ultrasound segmentation.
+
+---
+
+### 4. Deleted Discussion: Clinical Deployment and Future Work
+
+**Original location:**
+Section V, **Discussion and Conclusion**, after the discussion of the cross-modality generalization potential of LS$^2$Net.
+
+**Deleted text:**
+
+> In real-world clinical settings, imaging devices and computational resources vary significantly across institutions and regions, and the applicability of our model in such diverse environments remains to be further explored. In the future, we plan to deploy LS$^2$Net on edge computing devices and collaborate with clinicians for professional validation to further assess its feasibility and practicality in real-world clinical workflows. Through joint evaluation with medical experts, we aim to investigate the model’s consistency across different disease types, imaging parameters, and operator conditions, thereby confirming its clinical robustness and reliability. Moreover, the generalization capability of LS$^2$Net across various imaging devices and modalities warrants further investigation. We intend to conduct systematic multi-center and multi-device experiments to evaluate its stability and adaptability, enhancing its reliability in diverse clinical scenarios. LS$^2$Net is expected to promote the standardization and generalization of intelligent ultrasound-assisted diagnosis, providing a stable, efficient, and scalable intelligent diagnostic support system for remote areas and primary healthcare institutions.
+
+**Reason for deletion:**
+This discussion of clinical deployment, multi-center validation, multi-device generalization, and future research directions was removed solely to reduce the manuscript page count. The removal does not affect the reported experimental findings or the main conclusions of the study.
+
+---
+
+### 5. Deleted Discussion: Fine-Grained Feature Processing and Lightweight Decoder Design
+
+**Original location:**
+Section V, **Discussion and Conclusion**, at the **end of the section**.
+
+**Deleted text:**
+
+> LS$^2$Net implements fine-grained processing for different types of features, establishing a coarse-to-fine feature handling strategy that enables diversified feature representations. Meanwhile, the RRSC module optimizes skip connections, effectively reducing the computational burden on the decoder and accelerating feature reconstruction. LS$^2$Net provides a novel approach for lightweight segmentation models that balance performance and speed, offering a practical solution to meet the demands of clinical applications.
+
+**Reason for deletion:**
+This concluding discussion was removed solely to reduce the manuscript page count and avoid redundancy with the detailed descriptions of the network architecture and modules provided in the main manuscript. The corresponding methodological contributions and efficiency advantages remain documented elsewhere in the manuscript.
 
 ---
 
