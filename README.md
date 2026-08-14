@@ -286,12 +286,12 @@ The following discussion was removed from the main manuscript:
 ### 7. Bland–Altman and Linear Regression Analysis
 
 **Original location:**
-Section IV, **Experiment and Results** → **Comprehensive Analysis of LS²Net** → **Analysis of Binary Segmentation**.
+Section IV, **Experiment and Results** → **E. Comprehensive Analysis of LS²Net** → **4) Analysis of Binary Segmentation**.
 
 **Supplementary material:**
 `Figure/BAB_Analysis.jpg`
 
-**LaTeX label:**
+**Original LaTeX label:**
 `fig:bab`
 
 <div align="center">
@@ -302,13 +302,25 @@ Section IV, **Experiment and Results** → **Comprehensive Analysis of LS²Net**
 
 <sub>
 <i>
-<b>Figure S3.</b> Bland–Altman analysis and linear regression analysis of binary segmentation datasets between LS$^2$Net predictions and ground truth (GT).
-    (a) Bland–Altman analysis evaluates the agreement between LS$^2$Net predictions and GT by quantifying the mean bias and limits of agreement (±1.96 SD). A smaller bias and narrower limits indicate better consistency and less systematic deviation across datasets.
-    (b) Linear regression analysis assesses the correlation between LS$^2$Net and GT through Pearson’s correlation coefficient (R) and corresponding P-value. Higher R values and statistically significant P values (typically P $<$ 0.05) demonstrate a strong linear relationship and reliable predictive performance of LS$^2$Net across different binary segmentation datasets.
+<b>Figure S3.</b> Bland–Altman and linear regression analyses of binary segmentation results between LS$^2$Net predictions and ground truth (GT) across multiple datasets. (a) Bland–Altman analysis evaluates the agreement between predicted and ground-truth target areas by measuring the mean bias and limits of agreement ($\pm$1.96 SD). Smaller bias and narrower limits of agreement indicate better consistency and lower systematic deviation. (b) Linear regression analysis evaluates the correlation between predicted and ground-truth target areas using Pearson's correlation coefficient ($R$) and the corresponding $P$-value. Higher $R$ values indicate stronger linear correlation between predictions and GT.
 </i>
 </sub>
 
 </div>
+
+<br/>
+
+The following analysis was originally included in the main manuscript and was removed solely to comply with the IEEE Regular Paper page limit. The complete analysis is preserved here for editorial reference.
+
+> **4) Analysis of Binary Segmentation:**
+> For the additional binary segmentation datasets, we further evaluated the consistency and correlation between LS$^2$Net predictions and manually annotated ground truth using Bland–Altman and linear regression analyses. Specifically, the number of foreground pixels in each predicted and ground-truth mask was calculated as an estimate of the corresponding target region area. The predicted and ground-truth areas were then compared to quantitatively assess the consistency and reliability of LS$^2$Net across different datasets.
+>
+> **Bland–Altman Analysis:**
+> Bland–Altman analysis was employed to evaluate the agreement between the predicted and ground-truth target areas. As shown in \hyperref[fig:bab]{Fig.~\ref{fig:bab}~(a)}, LS$^2$Net exhibits stable agreement across the evaluated datasets, with most prediction differences distributed around the zero-bias line. Specifically, LS$^2$Net achieved bias values of -196.98, -423.47, 118.36, -650.65, -425.89, 35.98, and -59.41 for BUS_BRA, BUSI, KidneyUS, Kvasir-SEG, CVC-ClinicDB, EchoNet-ED, and EchoNet-ES, respectively, with corresponding standard deviations of 1735.35, 3462.79, 1380.32, 4619.40, 1480.23, 835.67, and 632.75. The relatively small biases and concentration of the differences around the zero line indicate limited systematic deviation between the predicted and ground-truth areas, demonstrating good consistency across diverse binary segmentation datasets.
+>
+> **Linear Regression Analysis:**
+> Linear regression analysis was further performed to assess the correlation between the predicted and ground-truth target areas. As shown in \hyperref[fig:bab]{Fig.~\ref{fig:bab}~(b)}, LS$^2$Net demonstrates strong positive correlations across all evaluated datasets. Specifically, the Pearson correlation coefficients were 0.943 for BUS_BRA ($P=9.43\times10^{-90}$), 0.847 for BUSI ($P=1.548\times10^{-22}$), 0.924 for KidneyUS ($P=6.11\times10^{-23}$), 0.854 for Kvasir-SEG ($P=1.682\times10^{-29}$), 0.963 for CVC-ClinicDB ($P=8.76\times10^{-36}$), 0.951 for EchoNet-ED ($P<10^{-300}$), and 0.947 for EchoNet-ES ($P<10^{-300}$). The high correlation coefficients and close distribution of the predictions around the regression lines demonstrate a strong linear relationship between LS$^2$Net predictions and ground truth, further supporting the reliability and cross-dataset generalization capability of the proposed model.
+
 
 ---
 
