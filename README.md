@@ -327,12 +327,12 @@ The following analysis was originally included in the main manuscript and was re
 ### 8. Failure Case Analysis
 
 **Original location:**
-Section IV, **Experiment and Results** → **Cross-Dataset Evaluation**, following the discussion of the generalization results on colorectal datasets.
+Section IV, **Experiment and Results** → **Failure Case Analysis**
 
 **Supplementary material:**
 `Figure/faile_case.jpg`
 
-**LaTeX label:**
+**Original LaTeX label:**
 `fig:fail`
 
 <div align="center">
@@ -343,21 +343,23 @@ Section IV, **Experiment and Results** → **Cross-Dataset Evaluation**, followi
 
 <sub>
 <i>
-<b>Figure S4.</b> Failure Cases of Segmentation Caused by Frequency Aliasing.
+<b>Figure S4.</b> Representative failure cases of LS$^2$Net and possible frequency-aliasing effects. The examples illustrate challenging cases in which frequency-domain artifacts may interfere with feature representation and subsequently affect local structure and boundary prediction.
 </i>
 </sub>
 
 </div>
 
-### Analysis
+<br/>
 
-Although LS²Net achieves promising segmentation performance across multiple datasets, some challenging cases remain difficult to segment accurately. As illustrated in Fig. S4, representative failure cases are observed on the BUSI dataset.
+The following analysis was originally included in the main manuscript and was removed solely to comply with the IEEE Regular Paper page limit. The complete analysis is preserved here for editorial reference.
 
-One possible factor is frequency aliasing introduced during the spatial–frequency interaction process. Operations such as convolution, downsampling, and frequency-domain transformation may produce aliasing when high-frequency components exceed the effective sampling limit. After transformation back to the spatial domain, such aliasing may appear as structural artifacts or abnormal textures.
-
-These artifacts can interfere with feature extraction and may be incorrectly interpreted as anatomical structures. Consequently, local structural inconsistencies, inaccurate boundary localization, and regional mis-segmentation may occur.
-
-This analysis also suggests potential directions for future improvement. Adaptive frequency-band selection or learnable frequency weighting could be introduced to suppress unreliable high-frequency components. Frequency-domain consistency constraints or regularization could further improve the stability of feature representations between spatial and frequency domains.
+> ### Failure Case Analysis
+>
+> Although LS$^2$Net achieves promising segmentation performance across diverse datasets, certain challenging cases may still lead to suboptimal predictions. As illustrated in \hyperref[fig:fail]{Fig.~\ref{fig:fail}}, representative failure cases are observed on the BUSI dataset. During the spatial–frequency interaction process in LS$^2$Net, operations such as convolution, downsampling, and frequency-domain transformation may introduce frequency-domain aliasing, particularly when high-frequency components exceed the effective sampling limit. After being transformed back into the spatial domain, such aliasing effects may manifest as structural artifacts or abnormal textures, including local distortions and repetitive patterns.
+>
+> These artifacts may interfere with feature extraction and potentially be misinterpreted as anatomical structures, thereby affecting the model's ability to distinguish true lesion structures from artifact patterns. Consequently, local structural inconsistencies, inaccurate boundary localization, and regional mis-segmentation may occur. These failure cases indicate that although the spatial–frequency interaction strategy provides an effective means of enhancing feature representation, the reliability of high-frequency information remains an important consideration for further improving the robustness of the model.
+>
+> In future work, the frequency-domain processing strategy could be further improved through adaptive frequency-band selection or learnable frequency weighting mechanisms, which may reduce the influence of unreliable high-frequency components on feature representation. In addition, frequency-domain consistency constraints, such as frequency-domain regularization or consistency losses during training, could be incorporated to encourage more stable structural representations between the spatial and frequency domains. These strategies may further improve the robustness of LS$^2$Net against frequency-domain artifacts and challenging ultrasound image patterns.
 
 ---
 
