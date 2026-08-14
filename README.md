@@ -277,9 +277,7 @@ Section II, **Related Work** → **Ultrasound Image Segmentation**, immediately 
 
 The following discussion was removed from the main manuscript:
 
-> However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness.
-
-This supplementary discussion further clarifies the motivation behind LS²Net by connecting the limitations of existing ultrasound segmentation methods with the specific design objectives of the proposed architecture.
+> However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table I, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
 
 ---
 
@@ -296,12 +294,6 @@ Section IV, **Experiment and Results** → **Comprehensive Analysis of LS²Net**
 **LaTeX label:**
 `fig:bab`
 
-This supplementary analysis evaluates the agreement and correlation between LS²Net predictions and ground-truth segmentation masks across multiple binary segmentation datasets.
-
-For the Bland–Altman analysis, the number of foreground pixels in the predicted and ground-truth masks is used as an estimate of the corresponding target region area. The difference between prediction and ground truth is analyzed against their mean values to assess systematic bias and agreement.
-
-For the linear regression analysis, the predicted and ground-truth foreground pixel counts are compared using Pearson's correlation coefficient and the corresponding statistical significance. The results demonstrate strong correlations across the evaluated datasets, providing additional evidence for the stability and generalization capability of LS²Net.
-
 <div align="center">
 
 <img src="Figure/BAB_Analysis.jpg" width="92%" alt="Bland-Altman and Linear Regression Analysis"/>
@@ -310,39 +302,13 @@ For the linear regression analysis, the predicted and ground-truth foreground pi
 
 <sub>
 <i>
-<b>Figure S3.</b> Bland–Altman and linear regression analyses between LS²Net predictions and ground truth across multiple binary segmentation datasets. (a) Bland–Altman analysis evaluates agreement and systematic bias. (b) Linear regression analysis evaluates the correlation between predicted and ground-truth target areas.
+<b>Figure S3.</b> Bland–Altman analysis and linear regression analysis of binary segmentation datasets between LS$^2$Net predictions and ground truth (GT).
+    (a) Bland–Altman analysis evaluates the agreement between LS$^2$Net predictions and GT by quantifying the mean bias and limits of agreement (±1.96 SD). A smaller bias and narrower limits indicate better consistency and less systematic deviation across datasets.
+    (b) Linear regression analysis assesses the correlation between LS$^2$Net and GT through Pearson’s correlation coefficient (R) and corresponding P-value. Higher R values and statistically significant P values (typically P $<$ 0.05) demonstrate a strong linear relationship and reliable predictive performance of LS$^2$Net across different binary segmentation datasets.
 </i>
 </sub>
 
 </div>
-
-#### Quantitative Results
-
-The Bland–Altman analysis yielded the following bias and standard deviation values:
-
-| Dataset      |    Bias |      SD |
-| ------------ | ------: | ------: |
-| BUS_BRA      | -196.98 | 1735.35 |
-| BUSI         | -423.47 | 3462.79 |
-| KidneyUS     |  118.36 | 1380.32 |
-| Kvasir-SEG   | -650.65 | 4619.40 |
-| CVC-ClinicDB | -425.89 | 1480.23 |
-| EchoNet-ED   |   35.98 |  835.67 |
-| EchoNet-ES   |  -59.41 |  632.75 |
-
-The corresponding Pearson correlation coefficients are:
-
-| Dataset      |     R |            P-value |
-| ------------ | ----: | -----------------: |
-| BUS_BRA      | 0.943 |  9.43 × 10$^{-90}$ |
-| BUSI         | 0.847 | 1.548 × 10$^{-22}$ |
-| KidneyUS     | 0.924 |  6.11 × 10$^{-23}$ |
-| Kvasir-SEG   | 0.854 | 1.682 × 10$^{-29}$ |
-| CVC-ClinicDB | 0.963 |  8.76 × 10$^{-36}$ |
-| EchoNet-ED   | 0.951 |                  0 |
-| EchoNet-ES   | 0.947 |                  0 |
-
-Overall, the relatively small biases and strong positive correlations indicate good agreement between LS²Net predictions and ground-truth segmentation areas across different datasets.
 
 ---
 
@@ -365,7 +331,7 @@ Section IV, **Experiment and Results** → **Cross-Dataset Evaluation**, followi
 
 <sub>
 <i>
-<b>Figure S4.</b> Representative failure cases of LS²Net caused by frequency aliasing.
+<b>Figure S4.</b> Failure Cases of Segmentation Caused by Frequency Aliasing.
 </i>
 </sub>
 
