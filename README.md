@@ -177,37 +177,24 @@ This comparison table was removed solely to reduce the manuscript page count.
 
 ---
 
-### 4. Deleted Discussion: Challenges of Existing Ultrasound Segmentation Methods
+### 4. Deleted Discussion: Challenges of Existing Ultrasound Segmentation Methods and LS²Net Motivation
 
 **Original location:**
 Section II, **Related Work** → Subsection **Ultrasound Image Segmentation**, immediately after the paragraph ending with the discussion of **BLENet** and before the discussion of clinical generalization.
 
 **Text immediately preceding the deleted content:**
 
-> In contrast, BLENet draws inspiration from efficient human visual processing, proposing an antagonistic bio-inspired module and integrating frequency-domain transformation to expand the receptive field and enhance feature extraction.
+> In contrast, BLENet [23] draws inspiration from efficient human visual processing, proposing an antagonistic bio-inspired module and integrating frequency-domain transformation to expand the receptive field and enhance feature extraction.
 
 **Deleted text:**
 
-> However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency.
+> However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table III, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
 
 **Reason for deletion:**
-This discussion was removed solely to reduce the manuscript page count and avoid redundancy with the motivation presented in the Introduction.
+This discussion was removed solely to reduce the manuscript page count and avoid redundancy with the motivation presented in the Introduction, and the core motivation and contributions of LS²Net remain in the main manuscript
 
 ---
 
-### 5. Deleted Discussion: Clinical Generalization and LS²Net Motivation
-
-**Original location:**
-Section II, **Related Work** → Subsection **Ultrasound Image Segmentation**, immediately after the deleted discussion described above and before the end of the subsection.
-
-**Deleted text:**
-
-> More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions.
-
-> To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table~\ref{tab:advan}, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
-
-**Reason for deletion:**
-These paragraphs were removed solely to comply with the IEEE Regular Paper page limit. The core motivation and contributions of LS²Net remain in the main manuscript.
 
 
 
