@@ -28,7 +28,7 @@ Section I, **Introduction**, immediately after the discussion motivating the col
 
 <sub>
 <i>
-<b>Figure S1.</b> Visualization of the Effective Receptive Fields (ERF) across different methods reveals distinct characteristics. U-Net (CNN-based) exhibits a blurred and highly localized receptive field, whereas MobileUViT (Transformer-based) shows a dispersed and weak response. LS²Net (baseline) achieves a more concentrated yet limited receptive field. In contrast, the full LS²Net model produces a clearer and more balanced ERF distribution, effectively capturing both local details and global context, thereby demonstrating superior feature modeling capability. {We take the central response of the output feature map as the target and compute its gradient distribution with respect to the input pixels via backpropagation to characterize the contribution of different regions. The results are then averaged across multiple samples and normalized using logarithmic scaling to obtain a stable estimation of the effective receptive field (ERF). Furthermore, by measuring the minimal high-contribution coverage ratios under different thresholds (20\%, 30\%, 50\%, and 99\%), we quantitatively compare the spatial modeling capability of different models. [3]
+<b>Fig. 1.</b> Visualization of the Effective Receptive Fields (ERF) across different methods reveals distinct characteristics. U-Net (CNN-based) exhibits a blurred and highly localized receptive field, whereas MobileUViT (Transformer-based) shows a dispersed and weak response. LS²Net (baseline) achieves a more concentrated yet limited receptive field. In contrast, the full LS²Net model produces a clearer and more balanced ERF distribution, effectively capturing both local details and global context, thereby demonstrating superior feature modeling capability. {We take the central response of the output feature map as the target and compute its gradient distribution with respect to the input pixels via backpropagation to characterize the contribution of different regions. The results are then averaged across multiple samples and normalized using logarithmic scaling to obtain a stable estimation of the effective receptive field (ERF). Furthermore, by measuring the minimal high-contribution coverage ratios under different thresholds (20\%, 30\%, 50\%, and 99\%), we quantitatively compare the spatial modeling capability of different models. [3]
 </i>
 </sub>
 
@@ -52,7 +52,7 @@ Section I, **Introduction**, in the paragraph describing the challenges of ultra
 
 <sub>
 <i>
-<b>Figure S2.</b> Challenges in ultrasound image segmentation and the targeted design of LS²Net for balancing segmentation accuracy and computational efficiency.
+<b>Fig. 2.</b> Challenges in ultrasound image segmentation and the targeted design of LS²Net for balancing segmentation accuracy and computational efficiency.
 </i>
 </sub>
 
@@ -272,7 +272,7 @@ Section IV, **Experiment and Results** → **E. Comprehensive Analysis of LS²Ne
 
 <sub>
 <i>
-<b>Figure S3.</b> Bland–Altman and linear regression analyses of binary segmentation results between LS²Net predictions and ground truth (GT) across multiple datasets. (a) Bland–Altman analysis evaluates the agreement between predicted and ground-truth target areas by measuring the mean bias and limits of agreement ($\pm$1.96 SD). Smaller bias and narrower limits of agreement indicate better consistency and lower systematic deviation. (b) Linear regression analysis evaluates the correlation between predicted and ground-truth target areas using Pearson's correlation coefficient ($R$) and the corresponding $P$-value. Higher $R$ values indicate stronger linear correlation between predictions and GT.
+<b>Fig. 11.</b> Bland–Altman and linear regression analyses of binary segmentation results between LS²Net predictions and ground truth (GT) across multiple datasets. (a) Bland–Altman analysis evaluates the agreement between predicted and ground-truth target areas by measuring the mean bias and limits of agreement ($\pm$1.96 SD). Smaller bias and narrower limits of agreement indicate better consistency and lower systematic deviation. (b) Linear regression analysis evaluates the correlation between predicted and ground-truth target areas using Pearson's correlation coefficient ($R$) and the corresponding $P$-value. Higher $R$ values indicate stronger linear correlation between predictions and GT.
 </i>
 </sub>
 
@@ -289,7 +289,7 @@ The following supplementary analysis provides additional discussion and analysis
 > Bland-Altman analysis reflects the agreement between predicted and ground-truth pixel counts. As shown in Fig.11(a), overall performance is stable, with predictions closely matching the ground truth. Specifically, LS²Net achieved excellent segmentation results on BUS_BRA (bias = -196.98, SD = 1735.35), BUSI (bias = -423.47, SD = 3462.79), KidneyUS (bias = 118.36, SD = 1380.32), Kvasir-SEG (bias = -650.65, SD = 4619.4), CVC-ClinicDB (bias = -425.89, SD = 1480.23), EchoNet-ED (bias = 35.98, SD = 835.67), and EchoNet-ES (bias = -59.41, SD = 632.75). Most pixel differences are concentrated near the zero line, indicating minimal bias between predictions and ground truth, and demonstrating strong consistency of LS²Net across different datasets.
 >
 > **Linear Regression Analysis:**
-> Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig.11(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS_BRA (R = 0.943, P = $9.43 \times 10^{-90}$), BUSI (R = 0.847, P = $ 1.548×10^{-22}$), KidneyUS (R = 0.924, P = $6.11 \times 10^{-23}$), Kvasir-SEG (R = 0.854, P = $1.682 \times 10^{-29}$), CVC-ClinicDB (R = 0.963, P =$8.76 \times 10^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
+> Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig.11(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS_BRA (R = 0.943, P = $9.43 \times 10^{-90}$), BUSI (R = 0.847, P = $1.548 \times 10^{-22}$), KidneyUS (R = 0.924, P = $6.11 \times 10^{-23}$), Kvasir-SEG (R = 0.854, P = $1.682 \times 10^{-29}$), CVC-ClinicDB (R = 0.963, P =$ 8.76 \times 10^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
 
 
 ---
@@ -310,7 +310,7 @@ Section IV, **Experiment and Results** → **Failure Case Analysis**
 
 <sub>
 <i>
-<b>Figure S4.</b> Representative failure cases of LS²Net and possible frequency-aliasing effects. The examples illustrate challenging cases in which frequency-domain artifacts may interfere with feature representation and subsequently affect local structure and boundary prediction.
+<b>Fig. 15.</b> Representative failure cases of LS²Net and possible frequency-aliasing effects. The examples illustrate challenging cases in which frequency-domain artifacts may interfere with feature representation and subsequently affect local structure and boundary prediction.
 </i>
 </sub>
 
