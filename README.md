@@ -195,6 +195,126 @@ This discussion was removed solely to reduce the manuscript page count and avoid
 
 ---
 
+# LS2Net: A Lightweight Segmentation Network for Ultrasound Imaging via Synergy of Large and Small Receptive Fields
+Code will be made available upon paper acceptance
+
+## Deleted Content from Experiment and Results
+
+The following materials were removed from the Experiment and Results section of the manuscript solely to comply with the IEEE Regular Paper page limit. They are preserved here for editorial reference.
+
+### 1. Deleted Figure: Bland–Altman and Linear Regression Analysis
+
+**Original location:**
+Section IV, **Experiment and Results** → Subsection **Comprehensive Analysis of LS²Net** → **4) Analysis of Binary Segmentation**.
+
+The deleted figure was originally placed immediately after the discussion of the cross-scenario segmentation performance and before the **“5) Deployment Analysis”** subsection.
+
+**Figure file:**
+`Figure/BAB_Analysis.jpg`
+
+**LaTeX label:**
+`fig:bab`
+
+**Deleted figure:**
+
+<div align="center">
+
+<img src="Figure/BAB_Analysis.jpg" width="92%" alt="Bland–Altman and Linear Regression Analysis"/>
+
+<br/>
+
+<sub>
+<i>
+<b>Figure.</b> Bland–Altman analysis and linear regression analysis of binary segmentation datasets between LS$^2$Net predictions and ground truth (GT). (a) Bland–Altman analysis evaluates the agreement between LS$^2$Net predictions and GT by quantifying the mean bias and limits of agreement (±1.96 SD). A smaller bias and narrower limits indicate better consistency and less systematic deviation across datasets. (b) Linear regression analysis assesses the correlation between LS$^2$Net and GT through Pearson’s correlation coefficient (R) and corresponding P-value. Higher R values and statistically significant P values (typically P $<$ 0.05) demonstrate a strong linear relationship and reliable predictive performance of LS$^2$Net across different binary segmentation datasets.
+</i>
+</sub>
+
+<br/>
+
+<sub>
+<i>Removed from the main manuscript to comply with the IEEE Regular Paper page limit.</i>
+</sub>
+
+</div>
+
+<br/>
+
+---
+
+### 2. Deleted Discussion: Analysis of Binary Segmentation
+
+**Original location:**
+Section IV, **Experiment and Results** → Subsection **Comprehensive Analysis of LS²Net** → **4) Analysis of Binary Segmentation**.
+
+**Text immediately preceding the deleted content:**
+
+> When combined with other modules, the Dice score further increases from 76.74\% to 80.20\%, demonstrating the effectiveness of MRCFM, as shown in Fig. \ref{fig:mrcfm}.
+
+**Deleted text:**
+
+> **4) Analysis of Binary Segmentation:** For other binary segmentation datasets, model performance was analyzed using Bland-Altman and linear regression analyses. The number of foreground pixels in both the predicted and manually annotated masks was summed, with the foreground pixel count representing the area of the target segmentation region. The areas of the predicted masks were then compared with those of the ground truth to evaluate LS²Net’s segmentation performance.
+>
+> **Bland-Altman Analysis:** Bland-Altman analysis reflects the agreement between predicted and ground-truth pixel counts. As shown in Fig. \ref{fig:bab}(a), overall performance is stable, with predictions closely matching the ground truth. Specifically, LS²Net achieved excellent segmentation results on BUS\_BRA (bias = -196.98, SD = 1735.35), BUSI (bias = -423.47, SD = 3462.79), KidneyUS (bias = 118.36, SD = 1380.32), Kvasir-SEG (bias = -650.65, SD = 4619.4), CVC-ClinicDB (bias = -425.89, SD = 1480.23), EchoNet-ED (bias = 35.98, SD = 835.67), and EchoNet-ES (bias = -59.41, SD = 632.75). Most pixel differences are concentrated near the zero line, indicating minimal bias between predictions and ground truth, and demonstrating strong consistency of LS²Net across different datasets.
+>
+> **Linear Regression Analysis:** Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig. \ref{fig:bab}(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS\_BRA (R = 0.943, P = 9.43×10$^{-90}$), BUSI (R = 0.847, P = 1.548×10$^{-22}$), KidneyUS (R = 0.924, P = 6.11×10$^{-23}$), Kvasir-SEG (R = 0.854, P = 1.682×10$^{-29}$), CVC-ClinicDB (R = 0.963, P = 8.76×10$^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
+
+**Reason for deletion:**
+
+This analysis and its corresponding figure were removed solely to reduce the manuscript page count. The quantitative segmentation results and the main conclusions regarding the performance and generalization capability of LS²Net remain in the main manuscript.
+
+---
+
+### 3. Deleted Figure and Discussion: Failure Case Analysis
+
+**Original location:**
+Section IV, **Experiment and Results** → Subsection **Cross Datasets Evaluation**, after the discussion of the generalization results on the colorectal datasets.
+
+**Deleted content:**
+The complete **“Failure Case Analysis”** subsection and its corresponding figure.
+
+**Figure file:**
+`Figure/faile_case.jpg`
+
+**LaTeX label:**
+`fig:fail`
+
+**Deleted figure:**
+
+<div align="center">
+
+<img src="Figure/faile_case.jpg" width="92%" alt="Failure Cases of Segmentation Caused by Frequency Aliasing"/>
+
+<br/>
+
+<sub>
+<i>
+<b>Figure.</b> Failure Cases of Segmentation Caused by Frequency Aliasing.
+</i>
+</sub>
+
+<br/>
+
+<sub>
+<i>Removed from the main manuscript to comply with the IEEE Regular Paper page limit.</i>
+</sub>
+
+</div>
+
+<br/>
+
+**Deleted subsection:**
+
+> ### Failure Case Analysis
+>
+> Although LS²Net achieves promising segmentation performance, certain limitations still lead to suboptimal results on some images. As illustrated in Fig. \ref{fig:fail}, we present failure cases of LS²Net on the BUSI dataset. During the spatial–frequency interaction process in LS²Net, operations such as convolution, downsampling, and frequency-domain transformation may introduce frequency-domain aliasing when the input signal contains high-frequency components beyond the Nyquist frequency. This aliasing effect, when transformed back into the spatial domain, may manifest as structural artifacts or abnormal textures, resulting in distortions or repetitions in the image. Consequently, these artifacts can interfere with feature extraction, mislead the model in identifying true anatomical structures, and lead to structural inconsistencies, inaccurate boundary localization, and mis-segmentation in local regions.
+>
+> In future work, the frequency-domain processing can be further improved. Specifically, frequency band selection or adaptive frequency weighting mechanisms can be introduced in the frequency branch to reduce the influence of unreliable high-frequency components on feature representation. In addition, incorporating frequency-domain consistency constraints—such as frequency-domain regularization or consistency loss during training—can help maintain more stable structural representations between the spatial and frequency domains, thereby improving robustness against artifacts.
+
+**Reason for deletion:**
+
+This failure-case analysis and its corresponding figure were removed solely to reduce the manuscript page count. The main methodological contributions and experimental validation of LS²Net remain unchanged.
+
+---
 
 
 
