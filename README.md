@@ -65,11 +65,8 @@ Section I, **Introduction**, in the paragraph describing the challenges of ultra
 
 The corresponding sentence in the original manuscript was:
 
-> Furthermore, in the decoder, we carefully design a Multi-Receptive Field Coarse-to-Fine Module (MRCFM), which balances coarse- and fine-grained information by integrating features from different receptive fields. Through a multi-branch structure, MRCFM provides diverse feature representations, enabling more precise boundary delineation and alleviating the issue of blurry edges, as shown in Fig.2.
+Furthermore, in the decoder, we carefully design a Multi-Receptive Field Coarse-to-Fine Module (MRCFM), which balances coarse- and fine-grained information by integrating features from different receptive fields. Through a multi-branch structure, MRCFM provides diverse feature representations, enabling more precise boundary delineation and alleviating the issue of blurry edges, > as shown in Fig.2.
 
-In the current main manuscript, the figure citation was commented out as follows:
-
-The figure and its corresponding citation are preserved here as supplementary material for editorial reference.
 ---
 
 ## II. Supplementary Materials from Related Work
@@ -83,10 +80,6 @@ The following discussion was removed from the main manuscript:
 
 > However, conventional convolution operations are inherently limited in receptive field, and large-kernel convolutions often saturate in performance before achieving a truly global receptive field, frequently requiring deep network stacking to further expand the receptive field and achieve high performance.
 
-This supplementary discussion highlights the limitations of conventional convolution-based architectures in modeling long-range dependencies. Although large-kernel convolutions can expand the receptive field, their ability to provide truly global contextual modeling remains limited, and further expansion may require deeper network architectures.
-
-This observation motivates the exploration of complementary receptive-field modeling strategies in LS²Net.
-
 ---
 
 ### 4. Discussion of the Limitations of Global Receptive Fields
@@ -97,8 +90,6 @@ Section II, **Related Work** → **Methods with Global Receptive Fields**, at th
 The following discussion was removed from the main manuscript:
 
 > However, despite their excellent global modeling abilities, both Transformers and Mamba have limitations. The self-attention mechanism in Transformers incurs quadratic computational complexity, resulting in substantial overhead, while structural characteristics of Mamba lead to slower inference speed. These constraints make both architectures challenging to deploy in clinical environments with limited computational resources [18].
-
-This supplementary discussion emphasizes the computational considerations associated with global receptive-field architectures. Although Transformers and Mamba-based models provide strong global contextual modeling, their computational and inference characteristics can present challenges for lightweight and real-time clinical deployment.
 
 ---
 
@@ -254,9 +245,6 @@ LW: Lightweight design.
 
 <br/>
 
-The table provides a qualitative comparison of representative segmentation methods from the perspectives of multi-scale receptive-field synergy, noise suppression, low-contrast feature extraction, boundary refinement, and lightweight design. As summarized in Table I, LS²Net incorporates all five targeted design aspects, reflecting its comprehensive consideration of segmentation accuracy, robustness, boundary quality, and computational efficiency.
-
-**Removed from the main manuscript solely to comply with the IEEE Regular Paper page limit.**
 ---
 
 ### 6. Discussion of Existing Ultrasound Segmentation Methods and LS²Net Motivation
@@ -280,9 +268,6 @@ Section IV, **Experiment and Results** → **E. Comprehensive Analysis of LS²Ne
 **Supplementary material:**
 `Figure/BAB_Analysis.jpg`
 
-**Original LaTeX label:**
-`fig:bab`
-
 <div align="center">
 
 <img src="Figure/BAB_Analysis.jpg" width="92%" alt="Bland-Altman and Linear Regression Analysis"/>
@@ -299,7 +284,7 @@ Section IV, **Experiment and Results** → **E. Comprehensive Analysis of LS²Ne
 
 <br/>
 
-The following analysis was originally included in the main manuscript and was removed solely to comply with the IEEE Regular Paper page limit. The complete analysis is preserved here for editorial reference.
+The following supplementary analysis provides additional discussion and analysis that was removed from the main manuscript solely to comply with the IEEE Regular Paper page limit.
 
 > **4) Analysis of Binary Segmentation:**
 > **4) Analysis of Binary Segmentation**: For other binary segmentation datasets, model performance was analyzed using Bland-Altman and linear regression analyses. The number of foreground pixels in both the predicted and manually annotated masks was summed, with the foreground pixel count representing the area of the target segmentation region. The areas of the predicted masks were then compared with those of the ground truth to evaluate LS²Net’s segmentation performance.
@@ -320,9 +305,6 @@ Section IV, **Experiment and Results** → **Failure Case Analysis**
 **Supplementary material:**
 `Figure/faile_case.jpg`
 
-**Original LaTeX label:**
-`fig:fail`
-
 <div align="center">
 
 <img src="Figure/faile_case.jpg" width="92%" alt="Failure Cases of LS2Net"/>
@@ -339,7 +321,7 @@ Section IV, **Experiment and Results** → **Failure Case Analysis**
 
 <br/>
 
-The following analysis was originally included in the main manuscript and was removed solely to comply with the IEEE Regular Paper page limit. The complete analysis is preserved here for editorial reference.
+The following supplementary analysis provides additional discussion and analysis that was removed from the main manuscript solely to comply with the IEEE Regular Paper page limit.
 
 > ### Failure Case Analysis
 >
@@ -359,8 +341,6 @@ The following summary was removed from the main manuscript:
 
 > Ultrasound imaging, as a widely used medical imaging modality, is applied for the diagnosis of multiple organs and systems throughout the body. To meet the growing clinical demands for accuracy, efficiency, and versatility, modern ultrasound systems are increasingly integrating multiple AI-assisted functions (lesion segmentation). However, deploying these segmentation models directly within ultrasound machines (on-device) for real-time inference is challenging due to the constraints of computational resources, memory capacity, and power consumption. Therefore, developing lightweight and efficient network architectures is essential. To address this need, we propose LS²Net, a lightweight medical image segmentation framework that achieves a balance between segmentation accuracy and computational efficiency. The encoder combines global and local receptive fields to capture multi-scale contextual information, while the decoder employs a multi-receptive field fusion strategy to reconstruct fine-grained features at different levels. The LACS module further refines skip connections to preserve boundary details. Benefiting from these architectural designs, LS²Net achieves a favorable trade-off between accuracy and efficiency, delivering state-of-the-art segmentation performance across five medical scenarios and seven datasets, and demonstrating strong generalization ability on four cross-dataset tests, while significantly reducing computational cost without sacrificing segmentation quality.
 
-This supplementary summary provides a concise overview of the motivation, architecture, and overall experimental findings of LS²Net.
-
 ---
 
 ### 10. On-Device Deployment and Real-Time Clinical Applications
@@ -372,7 +352,6 @@ The following discussion was removed from the main manuscript:
 
 > LS²Net contains only 0.21M parameters and achieves an inference speed of 96 FPS, making it easily embeddable into ultrasound consoles or portable devices for real-time, on-device segmentation. This capability enables efficient operation directly on the ultrasound platform, allowing real-time segmentation of target regions during image acquisition and substantially enhancing the efficiency and intelligence of ultrasound examinations. Clinically, real-time lesion localization and quantitative visualization during scanning facilitate faster and more accurate diagnosis, which is particularly valuable in emergency, bedside, and primary healthcare settings where computational resources are limited.
 
-This supplementary discussion further explains the potential practical value of the lightweight architecture and high inference speed of LS²Net for real-time ultrasound applications.
 
 ---
 
@@ -385,8 +364,6 @@ The following discussion was removed from the main manuscript:
 
 > The collaborative receptive field paradigm integrates multi-scale receptive fields via a multi-branch architecture to jointly model structural and texture information. As it is inherently modality-agnostic, it demonstrates strong cross-modality generalization. In MRI and CT, large receptive fields capture global anatomical structures, while small receptive fields refine local details, enabling effective segmentation across different scales. In histopathology, large receptive fields model tissue-level context, whereas small receptive fields focus on cellular morphology, aligning well with cell-level analysis tasks. Overall, this paradigm provides a unified and flexible framework for multi-scale feature modeling, which can be readily extended to various medical imaging modalities and tasks.
 
-This supplementary discussion explores the potential extension of the collaborative receptive-field paradigm beyond ultrasound imaging. It highlights how complementary receptive fields may be useful for modeling anatomical structures at different spatial scales across MRI, CT, and histopathology.
-
 ---
 
 ### 12. Clinical Deployment and Future Work
@@ -397,8 +374,6 @@ Section V, **Discussion and Conclusion**, following the discussion of cross-moda
 The following discussion was removed from the main manuscript:
 
 > In real-world clinical settings, imaging devices and computational resources vary significantly across institutions and regions, and the applicability of our model in such diverse environments remains to be further explored. In the future, we plan to deploy LS²Net on edge computing devices and collaborate with clinicians for professional validation to further assess its feasibility and practicality in real-world clinical workflows. Through joint evaluation with medical experts, we aim to investigate the model’s consistency across different disease types, imaging parameters, and operator conditions, thereby confirming its clinical robustness and reliability. Moreover, the generalization capability of LS²Net across various imaging devices and modalities warrants further investigation. We intend to conduct systematic multi-center and multi-device experiments to evaluate its stability and adaptability, enhancing its reliability in diverse clinical scenarios. LS²Net is expected to promote the standardization and generalization of intelligent ultrasound-assisted diagnosis, providing a stable, efficient, and scalable intelligent diagnostic support system for remote areas and primary healthcare institutions.
-
-This supplementary discussion outlines potential future directions, including edge-device deployment, multi-center validation, multi-device evaluation, and clinical assessment with medical experts.
 
 ---
 
@@ -411,7 +386,6 @@ The following discussion was removed from the main manuscript:
 
 > LS²Net implements fine-grained processing for different types of features, establishing a coarse-to-fine feature handling strategy that enables diversified feature representations. Meanwhile, the RRSC module optimizes skip connections, effectively reducing the computational burden on the decoder and accelerating feature reconstruction. LS²Net provides a novel approach for lightweight segmentation models that balance performance and speed, offering a practical solution to meet the demands of clinical applications.
 
-This supplementary discussion further emphasizes the coarse-to-fine feature processing strategy and the lightweight decoder design of LS²Net. These characteristics contribute to the favorable balance between segmentation accuracy, computational cost, and inference speed.
 
 ---
 
