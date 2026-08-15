@@ -5,6 +5,8 @@
 ## Supplementary Analyses and Additional Materials from the Main Manuscript
 
 This repository provides additional supplementary analyses and discussions related to the main manuscript. For each supplementary content item, specific location information is provided to facilitate easy reference. The supplementary content is indicated in the format: 
+
+The following supplementary analysis provides additional discussion and analysis:
 > Supplementary Material.
 
 ---
@@ -16,7 +18,7 @@ This repository provides additional supplementary analyses and discussions relat
 **Location:**
 Section II, **Related Work** → **Methods with Local Receptive Fields**, at the end of the subsection, following the discussion of ConvNeXt and LKSNeXt.
 
-The following discussion was removed from the main manuscript:
+The following supplementary analysis provides additional discussion and analysis:
 
 > However, conventional convolution operations are inherently limited in receptive field, and large-kernel convolutions often saturate in performance before achieving a truly global receptive field, frequently requiring deep network stacking to further expand the receptive field and achieve high performance.
 
@@ -27,7 +29,7 @@ The following discussion was removed from the main manuscript:
 **Location:**
 Section II, **Related Work** → **Methods with Global Receptive Fields**, at the end of the subsection, following the discussion of BRAUNet++ and MCBTNet.
 
-The following discussion was removed from the main manuscript:
+The following supplementary analysis provides additional discussion and analysis:
 
 > However, despite their excellent global modeling abilities, both Transformers and Mamba have limitations. The self-attention mechanism in Transformers incurs quadratic computational complexity, resulting in substantial overhead, while structural characteristics of Mamba lead to slower inference speed. These constraints make both architectures challenging to deploy in clinical environments with limited computational resources [18].
 
@@ -38,7 +40,7 @@ The following discussion was removed from the main manuscript:
 **Location:**
 Section II, **Related Work** → **Ultrasound Image Segmentation**, immediately after the discussion of BLENet and before the discussion of clinical generalization.
 
-The following discussion was removed from the main manuscript:
+The following supplementary analysis provides additional discussion and analysis:
 
 > However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table I, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
 
