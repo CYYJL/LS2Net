@@ -20,7 +20,7 @@ Section II, **Related Work** → **Methods with Local Receptive Fields**, at the
 
 The following supplementary analysis provides additional discussion and analysis:
 
-> However, conventional convolution operations are inherently limited in receptive field, and large-kernel convolutions often saturate in performance before achieving a truly global receptive field, frequently requiring deep network stacking to further expand the receptive field and achieve high performance.
+> ... However, conventional convolution operations are inherently limited in receptive field, and large-kernel convolutions often saturate in performance before achieving a truly global receptive field, frequently requiring deep network stacking to further expand the receptive field and achieve high performance.
 
 ---
 
@@ -31,7 +31,7 @@ Section II, **Related Work** → **Methods with Global Receptive Fields**, at th
 
 The following supplementary analysis provides additional discussion and analysis:
 
-> However, despite their excellent global modeling abilities, both Transformers and Mamba have limitations. The self-attention mechanism in Transformers incurs quadratic computational complexity, resulting in substantial overhead, while structural characteristics of Mamba lead to slower inference speed. These constraints make both architectures challenging to deploy in clinical environments with limited computational resources [18].
+> ... However, despite their excellent global modeling abilities, both Transformers and Mamba have limitations. The self-attention mechanism in Transformers incurs quadratic computational complexity, resulting in substantial overhead, while structural characteristics of Mamba lead to slower inference speed. These constraints make both architectures challenging to deploy in clinical environments with limited computational resources [18].
 
 ---
 
@@ -42,7 +42,7 @@ Section II, **Related Work** → **Ultrasound Image Segmentation**, immediately 
 
 The following supplementary analysis provides additional discussion and analysis:
 
-> However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table I, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
+> ... However, these methods primarily rely on enlarging the receptive field to process ultrasound images, with the core objective of enhancing feature extraction. They do not explicitly address the fundamental challenges of ultrasound imaging, including speckle noise, low contrast, and blurry boundaries. Simply improving feature extraction is insufficient to balance segmentation performance and computational efficiency. More importantly, such approaches struggle to generalize effectively in real-world clinical environments characterized by multi-center data, heterogeneous devices, and diverse imaging conditions. To this end, LS²Net conducts a systematic analysis of the key challenges in ultrasound imaging and introduces targeted design strategies within the network architecture. Specifically, it enables effective noise suppression, discriminative feature extraction under low-contrast conditions, and refined boundary delineation. By doing so, LS²Net achieves a favorable trade-off between segmentation accuracy, computational efficiency, and model lightweightness. As shown in Table I, LS²Net demonstrates more comprehensive advantages and superior overall performance compared with existing methods.
 
 ---
 
@@ -82,7 +82,7 @@ The following supplementary analysis provides additional discussion and analysis
 > **Linear Regression Analysis:**
 > Linear regression analysis further validates the correlation between predicted and ground-truth values. As shown in Fig.11(b), LS²Net exhibits a strong positive correlation across multiple datasets. Specifically, BUS_BRA (R = 0.943, P = $9.43 \times 10^{-90}$), BUSI (R = 0.847, P = $1.548 \times 10^{-22}$), KidneyUS (R = 0.924, P = $6.11 \times 10^{-23}$), Kvasir-SEG (R = 0.854, P = $1.682 \times 10^{-29}$), CVC-ClinicDB (R = 0.963, P =$8.76 \times 10^{-36}$), EchoNet-ED (R = 0.951, P = 0), and EchoNet-ES (R = 0.947, P = 0) all show high correlation levels. The predicted values are closely distributed around the regression line, indicating that LS²Net demonstrates strong fitting capability and reliable correlation across different datasets.
 >
-> **4) Analysis of Binary Segmentation**: ... While general segmentation models can be deployed, their low inference speed (2–12 FPS) limits real-time applicability. In contrast, lightweight models achieve higher efficiency with lower complexity. ... Although MK-UNet achieves the lowest memory consumption and fastest inference speed, LS²Net maintains comparable computational efficiency while delivering consistently excellent segmentation performance across all datasets. This demonstrates that LS²Net effectively balances efficiency and segmentation accuracy by specifically addressing ultrasound imaging challenges such as noise interference, blurred boundaries, and low contrast.
+> **5) Deployment Analysis**: ... While general segmentation models can be deployed, their low inference speed (2–12 FPS) limits real-time applicability. In contrast, lightweight models achieve higher efficiency with lower complexity. ... Although MK-UNet achieves the lowest memory consumption and fastest inference speed, LS²Net maintains comparable computational efficiency while delivering consistently excellent segmentation performance across all datasets. This demonstrates that LS²Net effectively balances efficiency and segmentation accuracy by specifically addressing ultrasound imaging challenges such as noise interference, blurred boundaries, and low contrast.
 
 ---
 
@@ -93,10 +93,14 @@ Section IV, **Experiment and Results** → **F. Ablation Experiment** .
 
 The following supplementary analysis provides additional discussion and analysis:
 
-> ... 
+> ...
+> 
 > The visualization results of APDCB emphasize the capture of texture details, showing higher sensitivity to local features and fine boundaries. However, it is also more susceptible to noise and background textures, which can lead to discontinuities in the overall target region. In contrast, DWTCB excels in parsing global structures. Through the multi-scale and global receptive field provided by wavelet convolution, the model can integrate information across a broader context, resulting in more robust performance in maintaining target contours and semantic consistency. Additionally, DWTCB demonstrates advantages in suppressing redundant background features, reducing false-positive regions and producing predictions that are morphologically closer to the ground truth. This contrast indicates that APDCB is more suitable for capturing local texture patterns, while DWTCB is superior in global structural modeling and target differentiation. Their complementary strengths further validate our theoretical hypothesis.
-> ... 
+> 
+> ...
+> 
 > **Single large-kernel pathway**: larger receptive fields (e.g., 13×13) focus more on structural information and pay greater attention to the contour regions of the target. **Large-to-Small pathways**: Large receptive fields (e.g., 13×13, 9×9) first extract global structural information, emphasizing the overall contours and morphology of the target. Subsequently, small receptive fields (e.g., 3×3) refine local regions, further enhancing texture details and edge information, thereby ensuring both completeness and fine-grained accuracy of the segmentation results. **Small-to-Large pathways**: Small receptive fields (e.g., 1×1) initially focus on local features and details, but due to the lack of structural guidance, they may produce incomplete region segmentation. Larger receptive fields (e.g., 11×11) subsequently integrate these details into the global representation, gradually completing the overall structure. **similar size kernels pathways**: similar receptive fields (e.g., 5×5, 7×7) act as a balance between texture and structure, primarily capturing local patterns and regional consistency, thereby compensating for information that may be overlooked by overly large or small receptive fields.
+> 
 > ... This mechanism compensates for key information lost during the downsampling–upsampling process, effectively enhancing the feature representation of skip connections. Consequently, the decoder can focus more on reconstructing fine-grained features, improving segmentation precision and accuracy. ... 
 
 ---
@@ -146,6 +150,8 @@ The following supplementary analysis provides additional discussion and analysis
 > The collaborative receptive field paradigm integrates multi-scale receptive fields via a multi-branch architecture to jointly model structural and texture information. As it is inherently modality-agnostic, it demonstrates strong cross-modality generalization. In MRI and CT, large receptive fields capture global anatomical structures, while small receptive fields refine local details, enabling effective segmentation across different scales. In histopathology, large receptive fields model tissue-level context, whereas small receptive fields focus on cellular morphology, aligning well with cell-level analysis tasks. Overall, this paradigm provides a unified and flexible framework for multi-scale feature modeling, which can be readily extended to various medical imaging modalities and tasks.
 >
 > In real-world clinical settings, imaging devices and computational resources vary significantly across institutions and regions, and the applicability of our model in such diverse environments remains to be further explored. In the future, we plan to deploy LS²Net on edge computing devices and collaborate with clinicians for professional validation to further assess its feasibility and practicality in real-world clinical workflows. Through joint evaluation with medical experts, we aim to investigate the model’s consistency across different disease types, imaging parameters, and operator conditions, thereby confirming its clinical robustness and reliability. Moreover, the generalization capability of LS²Net across various imaging devices and modalities warrants further investigation. We intend to conduct systematic multi-center and multi-device experiments to evaluate its stability and adaptability, enhancing its reliability in diverse clinical scenarios. LS²Net is expected to promote the standardization and generalization of intelligent ultrasound-assisted diagnosis, providing a stable, efficient, and scalable intelligent diagnostic support system for remote areas and primary healthcare institutions.
+>
+>...
 
 ---
 
