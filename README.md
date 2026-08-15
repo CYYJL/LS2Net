@@ -113,7 +113,8 @@ Section IV, **Experiment and Results** → **G. Cross Datasets Evaluation** .
 The following supplementary analysis provides additional discussion and analysis:
 
 > ... When trained on the EchoNet-ED dataset and tested on Camus-ED, LS²Net demonstrated outstanding performance, achieving a Dice score of 92.80% and MIoU of 86.57%, ranking first. Compared with the other model, our model achieves superior segmentation performance, while using only 0.21M parameters. Similarly, when trained on EchoNet-ES and tested on EchoNet-ED, LS²Net achieved a Dice score of 92.45%. ...
-> ... When trained on Kvasir-SEG and transferred to CVC-ClinicDB for testing, LS²Net achieved a Dice score of 77.11% and MIoU of 62.77%. In the reverse setting, trained on CVC-ClinicDB and tested on Kvasir-SEG, our model demonstrated strong competitiveness, achieving a Dice score of 57.76%.
+> 
+> ... When trained on Kvasir-SEG and transferred to CVC-ClinicDB for testing, LS²Net achieved a Dice score of 77.11% and MIoU of 62.77%. In the reverse setting, trained on CVC-ClinicDB and tested on Kvasir-SEG, our model demonstrated strong competitiveness, achieving a Dice score of 57.76%. ...
 
 ---
 
