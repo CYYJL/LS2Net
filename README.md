@@ -2,19 +2,18 @@
 
 **Code will be made available upon paper acceptance.**
 
-## Supplementary Analyses and Additional Materials Removed from the Main Manuscript
+## Supplementary Analyses and Additional Materials from the Main Manuscript
 
-This repository provides supplementary analyses, figures, tables, and discussions that were removed from the main manuscript solely to comply with the IEEE Regular Paper page limit. These materials are preserved here for editorial reference and provide additional analysis, visualization, and discussion supporting the design, effectiveness, generalization, and limitations of LS²Net.
-
-The removal of these materials does not affect the core methodology, experimental results, or conclusions presented in the main manuscript.
+This repository provides additional supplementary analyses and discussions related to the main manuscript. For each supplementary content item, specific location information is provided to facilitate easy reference. The supplementary content is indicated in the format: 
+> Supplementary Material.
 
 ---
 
 ## I. Supplementary Materials from Related Work
 
-### 1. Discussion of the Limitations of Local Receptive Fields
+### 1. Supplementary Discussion of the Limitations of Local Receptive Fields
 
-**Original location:**
+**Location:**
 Section II, **Related Work** → **Methods with Local Receptive Fields**, at the end of the subsection, following the discussion of ConvNeXt and LKSNeXt.
 
 The following discussion was removed from the main manuscript:
@@ -23,9 +22,9 @@ The following discussion was removed from the main manuscript:
 
 ---
 
-### 2. Discussion of the Limitations of Global Receptive Fields
+### 2. Supplementary Discussion of the Limitations of Global Receptive Fields
 
-**Original location:**
+**Location:**
 Section II, **Related Work** → **Methods with Global Receptive Fields**, at the end of the subsection, following the discussion of BRAUNet++ and MCBTNet.
 
 The following discussion was removed from the main manuscript:
@@ -34,9 +33,9 @@ The following discussion was removed from the main manuscript:
 
 ---
 
-### 3. Discussion of Existing Ultrasound Segmentation Methods and LS²Net Motivation
+### 3. Supplementary Discussion of Existing Ultrasound Segmentation Methods and LS²Net Motivation
 
-**Original location:**
+**Location:**
 Section II, **Related Work** → **Ultrasound Image Segmentation**, immediately after the discussion of BLENet and before the discussion of clinical generalization.
 
 The following discussion was removed from the main manuscript:
@@ -47,9 +46,9 @@ The following discussion was removed from the main manuscript:
 
 ## II. Supplementary Materials from Experiments and Results
 
-### 4. Comparison with State-of-the-Art Models
+### 4. Supplementary Discussion of Comparison with State-of-the-Art Models
 
-**Original location:**
+**Location:**
 Section IV, **Experiment and Results** → **D. Comparison with State-of-the-Art Models** .
 
 The following supplementary analysis provides additional discussion and analysis that was removed from the main manuscript solely to comply with the IEEE Regular Paper page limit.
@@ -61,9 +60,9 @@ The following supplementary analysis provides additional discussion and analysis
 
 
 
-### 5. Comprehensive Analysis of LS²Net
+### 5. Supplementary Discussion of Comprehensive Analysis of LS²Net
 
-**Original location:**
+**Location:**
 Section IV, **Experiment and Results** → **E. Comprehensive Analysis of LS²Net** .
 
 The following supplementary analysis provides additional discussion and analysis:
@@ -85,9 +84,9 @@ The following supplementary analysis provides additional discussion and analysis
 
 ---
 
-### 6. Ablation Experiment
+### 6. Supplementary Discussion of Ablation Experiment
 
-**Original location:**
+**Location:**
 Section IV, **Experiment and Results** → **F. Ablation Experiment** .
 
 The following supplementary analysis provides additional discussion and analysis:
@@ -100,9 +99,9 @@ The following supplementary analysis provides additional discussion and analysis
 
 ---
 
-### 6. Cross Datasets Evaluation
+### 7. Supplementary Discussion of Cross Datasets Evaluation
 
-**Original location:**
+**Location:**
 Section IV, **Experiment and Results** → **G. Cross Datasets Evaluation** .
  
 The following supplementary analysis provides additional discussion and analysis:
@@ -112,9 +111,9 @@ The following supplementary analysis provides additional discussion and analysis
 
 ---
 
-### 6. Failure Case Analysis
+### 8. Supplementary Discussion of Failure Case Analysis
 
-**Original location:**
+**Location:**
 Section IV, **Experiment and Results** → **H. Failure Case Analysis** .
  
 The following supplementary analysis provides additional discussion and analysis:
@@ -128,9 +127,9 @@ The following supplementary analysis provides additional discussion and analysis
 
 ## III. Supplementary Materials from Discussion and Conclusion
 
-### 9. On-Device Deployment and Real-Time Clinical Applications
+### 9. Supplementary Analysis of Discussion and Conclusion
 
-**Original location:**
+**Location:**
 Section V, **Discussion and Conclusion**.
 
 The following supplementary analysis provides additional discussion and analysis:
@@ -145,8 +144,6 @@ The following supplementary analysis provides additional discussion and analysis
 > The collaborative receptive field paradigm integrates multi-scale receptive fields via a multi-branch architecture to jointly model structural and texture information. As it is inherently modality-agnostic, it demonstrates strong cross-modality generalization. In MRI and CT, large receptive fields capture global anatomical structures, while small receptive fields refine local details, enabling effective segmentation across different scales. In histopathology, large receptive fields model tissue-level context, whereas small receptive fields focus on cellular morphology, aligning well with cell-level analysis tasks. Overall, this paradigm provides a unified and flexible framework for multi-scale feature modeling, which can be readily extended to various medical imaging modalities and tasks.
 >
 > In real-world clinical settings, imaging devices and computational resources vary significantly across institutions and regions, and the applicability of our model in such diverse environments remains to be further explored. In the future, we plan to deploy LS²Net on edge computing devices and collaborate with clinicians for professional validation to further assess its feasibility and practicality in real-world clinical workflows. Through joint evaluation with medical experts, we aim to investigate the model’s consistency across different disease types, imaging parameters, and operator conditions, thereby confirming its clinical robustness and reliability. Moreover, the generalization capability of LS²Net across various imaging devices and modalities warrants further investigation. We intend to conduct systematic multi-center and multi-device experiments to evaluate its stability and adaptability, enhancing its reliability in diverse clinical scenarios. LS²Net is expected to promote the standardization and generalization of intelligent ultrasound-assisted diagnosis, providing a stable, efficient, and scalable intelligent diagnostic support system for remote areas and primary healthcare institutions.
-
----
 
 ---
 
